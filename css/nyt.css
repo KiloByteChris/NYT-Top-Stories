@@ -1,0 +1,14 @@
+/*
+    CSS for NYT-Top-Stories
+*/
+.nytArticle {
+    border-bottom: 1px solid #000;
+}
+.nytMainHeader {
+    font-size: 1em !important;
+}
+
+.storySection {
+    font-size: .5em !important;
+    color: #FFF !important;
+}
