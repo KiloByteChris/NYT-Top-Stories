@@ -1,14 +1,48 @@
 /*
     CSS for NYT-Top-Stories
 */
+.nyt-top-stories-container {
+    display: grid;
+    grid-template: "1fr 1fr";
+    grid-row-gap: 20px;
+    grid-column-gap: 10px;
+    margin-top: 20px;
+}
 .nytArticle {
     border-bottom: 1px solid #000;
 }
+
 .nytMainHeader {
     font-size: 1em !important;
 }
 
-.storySection {
-    font-size: .5em !important;
-    color: #FFF !important;
+.abstract {
+    font-size: .8em !important;
 }
+
+.byLine {
+    font-size: .8em !important;
+}
+
+.nytIMg {
+    padding-bottom: 10px;
+    align-self: end;
+}
+
+@media only screen and (min-width: 500px) {
+    .nyt-top-stories-container {
+        grid-template: "1fr 1fr 1fr ";
+    }
+}
+
+@media only screen and (min-width: 750px) {
+    .nyt-top-stories-container {
+        grid-template: "1fr 1fr 1fr 1fr ";
+    }
+}
+
+@media only screen and (min-width: 1000px) {
+    .nyt-top-stories-container {
+        grid-template: "1fr 1fr 1fr 1fr 1fr";
+    }
+ {

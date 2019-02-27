@@ -18,16 +18,15 @@ jQuery(document).ready(function(){
         */
         function displayNYTData(i, data) {
             var displayString = "<article class='nytArticle'>";
-            displayString += "<h3 class='nytMainHeader'><a href="+ data.results[i].url +">"+data.results[i].title +" </a></h3>";
-            displayString += "<p class='abstract'>"+ data.results[i].abstract +"</p>";
-            displayString += "<h4 class='byLine'>"+ data.results[i].byline +"</h4>";
-            // Check for an image
-            //if(typeof data.results[i].multimedia[0] !== 'undefined') {
+            // Check for an image by checking the length of the multi media array inside the data
             if(data.results[i].multimedia.length > 0) {
                 displayString += "<img class='nytImg' src="+ data.results[i].multimedia[3].url +" />";
             }else{
-                displayString += "<p class='noImageFound'>Not Available</p>";
+                displayString += "<p class='noImageFound'>Image Not Available</p>";
             }
+            displayString += "<h3 class='nytMainHeader'><a href="+ data.results[i].url +">"+data.results[i].title +" </a></h3>";
+            displayString += "<p class='abstract'>"+ data.results[i].abstract +"</p>";
+            displayString += "<h4 class='byLine'>"+ data.results[i].byline +"</h4>";
             displayString += "<div class='clearDiv'></div>";
             displayString += "</article>";
             artSection.append(displayString);
